@@ -1,0 +1,125 @@
+plugin.tx_bookmarks {
+    view {
+        templateRootPaths {
+            0 = EXT:bookmarks/Resources/Private/Templates/
+            10 = {$plugin.tx_bookmarks.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:bookmarks/Resources/Private/Partials/
+            10 = {$plugin.tx_bookmarks.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:bookmarks/Resources/Private/Layouts/
+            10 = {$plugin.tx_bookmarks.view.layoutRootPath}
+        }
+    }
+    settings {
+
+    }
+    features {
+        requireCHashArgumentForActionArguments = {$plugin.tx_bookmarks.features.requireCHashArgumentForActionArguments}
+    }
+}
+
+plugin.tx_bookmarks {
+    allowedBookmarkableTables {
+        1 {
+            repositoryClassName =
+            table = tt_content
+            label = LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:table.tt_content
+            fields = header, subheader, bodytext
+        }
+        2 {
+            repositoryClassName =
+            table = pages
+            label = LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:table.pages
+            fields = title, subtitle
+        }
+        3 {
+            repositoryClassName = \GeorgRinger\News\Domain\Repository\NewsRepository
+            table = tx_news_domain_model_news
+            label = LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:table.tx_news_domain_model_news
+            fields = title, teaser, bodytext
+            linkParams {
+                extensionName = News
+                pluginName = Pi1
+                vendorName = GeorgRinger
+                controller = News
+                action = detail
+                elementName = news
+            }
+        }
+    }
+}
+
+page.headerData.12244 = COA
+page.headerData.12244 {
+
+    10 = TEXT
+    10.dataWrap = let action_delete_label = "|{LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:action.delete.label}";
+    10.insertData = 1
+
+    20 = TEXT
+    20.dataWrap = let action_delete_title = "|{LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:action.delete.title}";
+    20.insertData = 1
+
+    30 = TEXT
+    30.dataWrap = let action_create_label = "|{LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:action.create.label}";
+    30.insertData = 1
+
+    40 = TEXT
+    40.dataWrap = let action_create_title = "|{LLL:EXT:bookmarks/Resources/Private/Language/locallang.xlf:action.create.title}";
+    40.insertData = 1
+
+    wrap = <script type="text/javascript">|</script>
+}
+
+page {
+    includeCSS {
+        bookmarks = EXT:bookmarks/Resources/Public/Css/bookmarks.css
+        bookmarks.title = Bookmarks
+        bookmarks.media = all
+        bookmarks.disableCompression = 1
+        bookmarks.excludeFromConcatenation = 1
+    }
+    includeJSFooter {
+        bookmarks = EXT:bookmarks/Resources/Public/JavaScript/bookmarks.js
+        bookmarks.type = text/javascript
+        bookmarks.disableCompression = 1
+        bookmarks.excludeFromConcatenation = 1
+    }
+}
+
+bookmarks_ajax = PAGE
+bookmarks_ajax {
+    typeNum = 12244
+
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        additionalHeaders = Content-type: application/json
+        no_cache = 1
+        contentObjectExceptionHandler = 0
+    }
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = Bookmarks
+        pluginName = Bookmark
+        vendorName = Walther
+        controller = Ajax
+        switchableControllerActions {
+            Ajax {
+                1 = list
+                2 = create
+                3 = delete
+            }
+        }
+        view < plugin.tx_bookmarks.view
+        persistence < plugin.tx_bookmarks.persistence
+        settings < plugin.tx_bookmarks.settings
+        features < plugin.tx_bookmarks.features
+    }
+}

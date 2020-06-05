@@ -1,0 +1,16 @@
+plugin.tx_bookmarks {
+    view {
+        # cat=tx_bookmarks/file; type=string; label= Path to template root (FE)
+        templateRootPath = EXT:bookmarks/Resources/Private/Templates/
+        # cat=tx_bookmarks/file; type=string; label= Path to template partials (FE)
+        partialRootPath = EXT:bookmarks/Resources/Private/Partials/
+        # cat=tx_bookmarks/file; type=string; label= Path to template layouts (FE)
+        layoutRootPath = EXT:bookmarks/Resources/Private/Layouts/
+    }
+    settings {
+
+    }
+    features {
+        requireCHashArgumentForActionArguments = 0
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"name": "walther/bookmarks",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 extension for bookmarking stuff from TYPO3.",
+	"keywords": [
+		"TYPO3",
+		"extension",
+		"bookmarks"
+	],
+	"homepage": "https://carstenwalther.de",
+	"license": "GPL-3.0-or-later",
+	"require": {
+		"typo3/cms-core": "^10.4.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "bookmarks"
+		}
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Walther\\Bookmarks\\" : "Classes/"
+		}
+	},
+	"minimum-stability" : "alpha",
+	"authors" : [{
+		"name" : "Carsten Walther",
+		"email" : "walther.carsten@web.de"
+	}]
+}

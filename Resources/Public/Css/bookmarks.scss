@@ -1,0 +1,54 @@
+a[data-bookmark] {
+
+    &.bookmarked {
+
+        &:after {
+            content: '*';
+            display: inline-block;
+            color: red;
+        }
+    }
+}
+
+.ce-tx-bookmarks {
+
+    .ce-tx-bookmarks__bodytext {
+
+    }
+
+    .ce-tx-bookmarks__list {
+
+        p {
+
+        }
+
+        ul {
+
+            li {
+
+            }
+        }
+    }
+
+    .ce-tx-bookmarks__link {
+
+        .ce-tx-bookmarks__link-title {
+
+        }
+
+        .ce-tx-bookmarks__link-type {
+            font-weight: bold;
+        }
+    }
+
+    .ce-tx-bookmarks__delete-action {
+        span {
+            display: none;
+        }
+
+        &:before {
+            content: ' ☓';
+            display: inline;
+        }
+    }
+}

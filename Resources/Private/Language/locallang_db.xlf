@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-07-14T09:47:10Z" product-name="bookmarks">
+		<header/>
+		<body>
+			<trans-unit id="fe_users.bookmarks">
+				<source>Bookmarks</source>
+			</trans-unit>
+			<trans-unit id="fe_users.bookmarks.tab">
+				<source>Bookmarks</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark">
+				<source>Bookmark</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark.feuser">
+				<source>Frontend user</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark.parent_uid">
+				<source>UID</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark.parent_pid">
+				<source>PID</source>
+			</trans-unit>
+			<trans-unit id="tx_bookmarks_domain_model_bookmark.parent_table">
+				<source>Table</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

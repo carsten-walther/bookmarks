@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+    elements {
+        bookmarks {
+            iconIdentifier = ext-bookmarks-wizard-icon
+            title = LLL:EXT:bookmarks/Resources/Private/Language/locallang_be.xlf:general.title
+            description = LLL:EXT:bookmarks/Resources/Private/Language/locallang_be.xlf:general.description
+            tt_content_defValues {
+                CType = list
+                list_type = bookmarks_bookmark
+            }
+        }
+    }
+    show := addToList(bookmarks)
+}

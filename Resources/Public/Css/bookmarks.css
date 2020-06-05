@@ -1,0 +1,19 @@
+@charset "UTF-8";
+a[data-bookmark].bookmarked:after {
+  content: "*";
+  display: inline-block;
+  color: red;
+}
+
+.ce-tx-bookmarks .ce-tx-bookmarks__link .ce-tx-bookmarks__link-type {
+  font-weight: bold;
+}
+.ce-tx-bookmarks .ce-tx-bookmarks__delete-action span {
+  display: none;
+}
+.ce-tx-bookmarks .ce-tx-bookmarks__delete-action:before {
+  content: " ☓";
+  display: inline;
+}
+
+/*# sourceMappingURL=bookmarks.css.map */

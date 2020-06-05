@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-07-14T09:47:10Z" product-name="bookmarks">
+		<header/>
+		<body>
+			<trans-unit id="bookmark">
+				<source>Bookmark ID:%s</source>
+			</trans-unit>
+
+			<trans-unit id="table.tt_content">
+				<source>Content Element</source>
+			</trans-unit>
+			<trans-unit id="table.pages">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="table.tx_news_domain_model_news">
+				<source>News</source>
+			</trans-unit>
+			<trans-unit id="table.tx_fnncalendar_domain_model_eventindex">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="table.tx_fnnaddress_domain_model_organisation">
+				<source>Organisation</source>
+			</trans-unit>
+
+			<trans-unit id="action.delete.label">
+				<source>delete</source>
+			</trans-unit>
+			<trans-unit id="action.delete.title">
+				<source>delete this bookmark</source>
+			</trans-unit>
+
+			<trans-unit id="action.create.label">
+				<source>create</source>
+			</trans-unit>
+			<trans-unit id="action.create.title">
+				<source>create bookmark for this</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

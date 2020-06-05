@@ -1,0 +1,7 @@
+config.tx_extbase.persistence.classes {
+	Walther\Bookmarks\Domain\Model\FrontendUser {
+		mapping {
+			tableName = fe_users
+		}
+	}
+}
